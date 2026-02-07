@@ -33,22 +33,17 @@ ClassAI is an AI-powered real-time classroom monitoring system that tracks stude
 ## 📸 Screenshots
 
 ### Dashboard (Light Mode)
-![Dashboard Light Mode](screenshots/dashboard-light.png)
+![Dashboard Light Mode](screenshots/jpg.1)
 *Clean, modern interface with real-time monitoring*
 
 ### Dashboard (Dark Mode)
-![Dashboard Dark Mode](screenshots/dashboard-dark.png)
+![Dashboard Dark Mode](screenshots/jpg.2)
 *Eye-friendly dark theme for evening classes*
 
 ### Live Monitoring
-![Live Monitoring](screenshots/live-monitoring.png)
+![Live Monitoring](screenshots/jpg.3)
 *Real-time face detection and attention tracking*
 
-### Demo
-![ClassAI Demo](screenshots/demo.gif)
-*See ClassAI in action - from start to report generation*
-
-> **Note**: Screenshots will be added soon. See [screenshots/README.md](screenshots/README.md) for guidelines.
 
 ## 🚀 Quick Start
 
@@ -110,21 +105,39 @@ http://localhost:3001
 - Perfect for evening or night classes
 
 ## 🏗️ Architecture
-
-```
+,,,
 ClassAI/
-├── main.py                 # FastAPI backend server
-├── continuous_webcam.py    # Webcam monitoring & face detection
-├── database.py            # Database operations
-├── models.py              # Data models
-├── report_generator.py    # Report generation logic
-├── index.html             # Frontend dashboard
-├── script.js              # Frontend JavaScript
-├── style.css              # Styling with dark mode
-├── models_ai/             # AI models
-│   └── haarcascade_frontalface_default.xml
-└── requirements.txt       # Python dependencies
-```
+│
+├── backend/
+│   ├── main.py                  # FastAPI backend server
+│   ├── continuous_webcam.py     # Webcam monitoring & face detection
+│   ├── database.py              # Database operations
+│   ├── models.py                # Data models / schemas
+│   └── report_generator.py      # Report generation logic
+│
+├── frontend/
+│   ├── index.html               # Frontend dashboard
+│   ├── script.js                # Frontend JavaScript logic
+│   └── style.css                # Styling (dark mode UI)
+│
+├── models_ai/
+│   └── haarcascade_frontalface_default.xml   # Face detection model
+│
+├── docs/
+│   ├── FEATURES.md              # Project features
+│   ├── SETUP.md                 # Setup instructions
+│   ├── QUICKSTART.md            # Quick start guide
+│   ├── PROJECT_STRUCTURE.md     # Architecture overview
+│   └── CONTRIBUTING.md          # Contribution guidelines
+│
+├── screenshots/
+│   └── images.jpg               # UI screenshots (optional)
+│
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project overview
+├── LICENSE
+└── .gitignore
+,,,
 
 ## 🔧 Configuration
 
