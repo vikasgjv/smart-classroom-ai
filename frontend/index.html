@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassAI - Smart Classroom Monitoring</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner" id="alertBanner" style="display: none;">
+        <span class="alert-icon">⚠️</span>
+        <span class="alert-message" id="alertMessage"></span>
+        <button class="alert-close" onclick="closeAlert()">×</button>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <h1>ClassAI</h1>
+                </div>
+                <p class="tagline">Smart Classroom Attention Monitoring</p>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <div class="dashboard">
+            <!-- Control Panel -->
+            <div class="control-panel card">
+                <h2 class="card-title">Session Control</h2>
+                <div class="session-info">
+                    <div class="info-item">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value" id="sessionStatus">Inactive</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Duration:</span>
+                        <span class="info-value" id="timeRunning">0 mins</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student:</span>
+                        <span class="info-value">S01</span>
+                    </div>
+                </div>
+                <div class="control-buttons">
+                    <button id="classToggle" class="btn btn-primary">
+                        <span class="btn-icon">▶️</span>
+                        Start Class
+                    </button>
+                    <button id="generateReport" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">📊</span>
+                        Generate Report
+                    </button>
+                    <button id="exportPDF" class="btn btn-export" disabled>
+                        <span class="btn-icon">📄</span>
+                        Export PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Attention Monitor -->
+            <div class="attention-monitor card">
+                <h2 class="card-title">Live Attention</h2>
+                <div class="attention-display">
+                    <div class="attention-circle">
+                        <div class="attention-value" id="attentionValue">— %</div>
+                        <div class="attention-label">Attention Score</div>
+                    </div>
+                </div>
+                <div class="engagement-status">
+                    <div class="status-emoji" id="statusEmoji">😊</div>
+                    <div class="status-level" id="statusLevel">Ready to Start</div>
+                </div>
+            </div>
+
+            <!-- Attention Chart -->
+            <div class="chart-container card">
+                <h2 class="card-title">Attention Timeline</h2>
+                <canvas id="attentionChart"></canvas>
+            </div>
+
+            <!-- Statistics -->
+            <div class="statistics card">
+                <h2 class="card-title">Session Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="avgAttention">0%</div>
+                            <div class="stat-label">Average</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="peakAttention">0%</div>
+                            <div class="stat-label">Peak</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">📉</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="lowestAttention">0%</div>
+                            <div class="stat-label">Lowest</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="absenceTime">0 min</div>
+                            <div class="stat-label">Absent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Report Section (Hidden by default) -->
+        <div class="report-section" id="reportSection" style="display: none;">
+            <div class="card">
+                <div class="report-header">
+                    <h2 class="card-title">Session Report</h2>
+                    <button class="btn btn-close" onclick="closeReport()">Close</button>
+                </div>
+                <div id="reportContent" class="report-content"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>ClassAI © 2026 | Smart Classroom Monitoring System</p>
+            <p class="footer-note">Last updated: <span id="lastUpdate">Never</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
