@@ -104,7 +104,9 @@ http://localhost:3001
 - Theme preference is saved automatically
 - Perfect for evening or night classes
 
-## 🏗️ Architecture
+## 🏗 Architecture
+
+```text
 ClassAI/
 ├── backend/
 │   ├── main.py                  # FastAPI backend server
@@ -135,6 +137,7 @@ ClassAI/
 ├── README.md                    # Project overview
 ├── LICENSE
 └── .gitignore
+
 
 
 ## 🔧 Configuration
