@@ -105,9 +105,7 @@ http://localhost:3001
 - Perfect for evening or night classes
 
 ## 🏗️ Architecture
-,,,
 ClassAI/
-│
 ├── backend/
 │   ├── main.py                  # FastAPI backend server
 │   ├── continuous_webcam.py     # Webcam monitoring & face detection
@@ -131,13 +129,13 @@ ClassAI/
 │   └── CONTRIBUTING.md          # Contribution guidelines
 │
 ├── screenshots/
-│   └── images.jpg               # UI screenshots (optional)
+│   └── dashboard.png            # UI screenshots (optional)
 │
 ├── requirements.txt             # Python dependencies
 ├── README.md                    # Project overview
 ├── LICENSE
 └── .gitignore
-,,,
+
 
 ## 🔧 Configuration
 
