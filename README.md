@@ -263,12 +263,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Mobile app support
 - [ ] Advanced analytics dashboard
 
-## 📧 Support
-
-For issues, questions, or suggestions:
-- Open an issue on GitHub
-- Email: your.email@example.com
-
+# Contact
+* Vikas G J
+* Email: vikasgjv@gmail.com
+* LinkedIn: linkedin.com/in/vikas-gj-979251296
+* 
 ## 🙏 Acknowledgments
 
 - OpenCV community for computer vision tools
@@ -276,7 +275,5 @@ For issues, questions, or suggestions:
 - Chart.js for beautiful visualizations
 
 ---
-
-**Made with ❤️ for better education**
 
 ⭐ Star this repo if you find it useful!
