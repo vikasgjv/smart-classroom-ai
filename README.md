@@ -56,7 +56,7 @@ ClassAI is an AI-powered real-time classroom monitoring system that tracks stude
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ClassAI.git
+git clone https://github.com/vikasgjv/ClassAI.git
 cd ClassAI
 ```
 
