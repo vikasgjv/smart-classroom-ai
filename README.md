@@ -33,7 +33,7 @@ ClassAI is an AI-powered real-time classroom monitoring system that tracks stude
 ## 📸 Screenshots
 
 ### Dashboard (Light Mode)
-![Dashboard Light Mode](screenshots/jpg.1)
+![Dashboard Light Mode](screenshots/1.jpg)
 *Clean, modern interface with real-time monitoring*
 
 ### Dashboard (Dark Mode)
